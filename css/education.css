@@ -1,0 +1,60 @@
+/* ============================================================
+   EDUCATION — education.css
+   ============================================================ */
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.edu-card {
+  background: var(--card);
+  border: var(--border-solid);
+  border-radius: var(--radius);
+  padding: 2rem 2.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  transition: border-color var(--transition);
+}
+.edu-card:hover { border-color: rgba(245, 166, 35, 0.3); }
+
+.edu-year {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--accent3);
+  letter-spacing: 0.1em;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  border-right: var(--border-solid);
+  padding-right: 1.5rem;
+}
+
+.edu-deg {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+.edu-inst {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.edu-score {
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--accent3);
+  text-align: right;
+}
+.edu-score span {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  display: block;
+  text-align: right;
+  letter-spacing: 0.1em;
+}

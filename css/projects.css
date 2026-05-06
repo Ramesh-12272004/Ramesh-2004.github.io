@@ -1,0 +1,64 @@
+/* ============================================================
+   PROJECTS — projects.css
+   ============================================================ */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.proj-card {
+  background: var(--card);
+  border: var(--border-solid);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.proj-card:hover {
+  border-color: rgba(61, 142, 248, 0.35);
+  transform: translateY(-4px);
+}
+
+.proj-year {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  margin-bottom: 1rem;
+}
+.proj-title {
+  font-family: var(--serif);
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
+}
+.proj-desc {
+  font-size: 0.88rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+.tag {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--accent2);
+  background: rgba(61, 142, 248, 0.08);
+  border: 1px solid rgba(61, 142, 248, 0.2);
+  padding: 0.25rem 0.6rem;
+  border-radius: var(--radius);
+  letter-spacing: 0.08em;
+}

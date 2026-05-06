@@ -1,0 +1,69 @@
+/* ============================================================
+   EXPERIENCE — experience.css
+   ============================================================ */
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.exp-card {
+  background: var(--card);
+  border: var(--border-solid);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+  transition: border-color var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Coloured left accent bar */
+.exp-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--accent);
+}
+.exp-card:nth-child(2)::before { background: var(--accent2); }
+.exp-card:hover { border-color: rgba(0, 201, 167, 0.25); }
+
+.exp-title {
+  font-size: 1.15rem;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+}
+.exp-company {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.exp-points { list-style: none; }
+.exp-points li {
+  font-size: 0.9rem;
+  color: var(--muted);
+  padding: 0.3rem 0 0.3rem 1.2rem;
+  position: relative;
+}
+.exp-points li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.exp-period {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-align: right;
+  white-space: nowrap;
+}

@@ -1,0 +1,55 @@
+/* ============================================================
+   SKILLS — skills.css
+   ============================================================ */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.skill-card {
+  background: var(--card);
+  border: var(--border-solid);
+  border-radius: var(--radius);
+  padding: 2rem;
+  transition: all var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+.skill-card:hover {
+  border-color: rgba(0, 201, 167, 0.3);
+  transform: translateY(-3px);
+}
+.skill-card:hover::before { opacity: 1; }
+
+.skill-icon {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.skill-cat {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+.skill-items {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.skill-items strong {
+  color: var(--text);
+  font-weight: 400;
+}

@@ -1,0 +1,96 @@
+/* ============================================================
+   RESPONSIVE — responsive.css
+   All breakpoints in one place.
+   ============================================================ */
+
+/* ── Tablet (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  :root {
+    --section-pad-x: 2rem;
+    --section-pad-y: 4rem;
+  }
+
+  nav { padding: 1.2rem 2rem; }
+  .nav-links { gap: 1.5rem; }
+
+  #hero { padding: 0 2rem; padding-top: var(--nav-height); }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .hero-photo-wrap {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .stats-bar { padding: 1.5rem 2rem; }
+}
+
+/* ── Mobile (≤ 640px) ── */
+@media (max-width: 640px) {
+  /* Hide desktop nav links, show hamburger */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: var(--nav-height);
+    left: 0; right: 0;
+    background: rgba(10, 14, 20, 0.97);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    padding: 1rem 0;
+    border-bottom: var(--border-solid);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links li { width: 100%; text-align: center; }
+  .nav-links a { display: block; padding: 0.8rem 1rem; }
+  .nav-hamburger { display: flex; }
+
+  /* Single column grids */
+  .skills-grid,
+  .projects-grid { grid-template-columns: 1fr; }
+
+  /* Education card — stack vertically */
+  .edu-card {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .edu-year {
+    writing-mode: horizontal-tb;
+    transform: none;
+    border-right: none;
+    border-bottom: var(--border-solid);
+    padding-right: 0;
+    padding-bottom: 0.8rem;
+  }
+  .edu-score { text-align: left; }
+
+  /* Experience card — stack vertically */
+  .exp-card { grid-template-columns: 1fr; }
+  .exp-period { text-align: left; }
+
+  /* Stats bar — 2-column wrap */
+  .stats-bar { flex-wrap: wrap; }
+  .stat {
+    min-width: 50%;
+    border-bottom: var(--border-solid);
+  }
+  .stat:nth-child(odd) { border-right: var(--border-solid); }
+  .stat:nth-child(even) { border-right: none; }
+  .stat:nth-last-child(-n+2) { border-bottom: none; }
+
+  /* Typography scaling */
+  .section-title { font-size: 2rem; }
+  .hero-name { font-size: 2.8rem; }
+  .contact-headline { font-size: 2.4rem; }
+}
